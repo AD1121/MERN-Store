@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useNavigate, UseNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Button, Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -27,7 +27,7 @@ const UserListScreen = () => {
       navigate('/login')
     }
 
-  }, [dispatch, navigate, successDelete])
+  }, [dispatch, navigate, successDelete, userInfo])
 
   const deleteHandler = (id) => {
     if (window.confirm('Are you sure?'))
